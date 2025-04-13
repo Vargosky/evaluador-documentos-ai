@@ -1,35 +1,61 @@
+# 🧠 Evaluador Automático de Documentos con DeepSeek
 
-# Evaluador de Currículum Vitae con PLatform de DeepSeek
+Este proyecto permite analizar documentos `.docx` (por ejemplo, currículums, ensayos, cartas, etc.) usando una rúbrica personalizada, evaluarlos automáticamente con inteligencia artificial (DeepSeek), y generar un informe detallado con puntaje, cumplimiento de criterios y retroalimentación.
 
-## ¿Qué hace este script?
+---
 
-- Lee todos los archivos `.docx` dentro de la carpeta `curriculums/`
-- Extrae los elementos de formato (tamaño de fuente, negrita, alineación, estilo)
-- Genera un prompt con los datos para ser evaluado por GPT-4
-- Envía el prompt usando la API de OpenAI
-- Guarda la evaluación en `resultados/`
+## 🚀 ¿Qué hace este sistema?
 
-## Instrucciones
+✅ Lee múltiples archivos `.docx` desde una carpeta  
+✅ Extrae formato (tamaño de letra, negrita, alineación, etc.)  
+✅ Usa una rúbrica definida en `prompt_base.txt`  
+✅ Envía el contenido a **DeepSeek** para evaluación automática  
+✅ Genera un archivo `.txt` por alumno con resultados  
+✅ Crea un `reporte_final.csv` con puntajes y retroalimentación  
+✅ Calcula la nota final con una fórmula configurable (ej: `nota = puntaje * 0.5 + 1`)
 
-1. Crea un entorno virtual (opcional):
+---
+
+## 📁 Estructura del proyecto
+
+evaluador-documentos-ai/ │ 
+├── curriculums/ # Archivos .docx a evaluar 
+├── prompts/ # Prompts generados por documento 
+├── resultados/ # Resultados individuales por archivo 
+├── prompt_base.txt # Plantilla con la rúbrica personalizada 
+├── analizar_cv.py # Script principal 
+├── requirements.txt # Dependencias 
+├── .env # Tu clave de API (no se sube) 
+└── reporte_final.csv # Informe consolidado (se genera)
+
+---
+
+## ⚙️ Requisitos
+
+- Python 3.9 o superior
+- Cuenta en [DeepSeek](https://platform.deepseek.com/) con clave de API
+
+---
+
+## 🧪 Instrucciones de uso
 
 ```bash
+# 1. Clona el proyecto
+git clone https://github.com/Vargosky/evaluador-documentos-ai.git
+cd evaluador-documentos-ai
+
+# 2. (Opcional) Crea entorno virtual
 python -m venv venv
-source venv/bin/activate  # o .\venv\Scripts\activate en Windows
-```
+.\venv\Scripts\activate      # En Windows
+# source venv/bin/activate   # En Linux/macOS
 
-2. Instala dependencias:
-
-```bash
+# 3. Instala dependencias
 pip install -r requirements.txt
-```
 
-3. Coloca tus archivos `.docx` en la carpeta `curriculums/`.
+# 4. Crea archivo .env con tu API Key
+echo DEEPSEEK_API_KEY=sk-proj-tu-clave-aquí > .env
 
-4. Coloca tu API Key de DeepSeek en el archivo `.env`.
+# 5. Coloca los archivos .docx en la carpeta 'curriculums/'
 
-5. Ejecuta el script:
-
-```bash
+# 6. Ejecuta el script
 python analizar_cv.py
-```
