@@ -18,15 +18,7 @@ Este proyecto permite analizar documentos `.docx` (por ejemplo, currículums, en
 
 ## 📁 Estructura del proyecto
 
-evaluador-documentos-ai/ │ 
-├── curriculums/ # Archivos .docx a evaluar 
-├── prompts/ # Prompts generados por documento 
-├── resultados/ # Resultados individuales por archivo 
-├── prompt_base.txt # Plantilla con la rúbrica personalizada 
-├── analizar_cv.py # Script principal 
-├── requirements.txt # Dependencias 
-├── .env # Tu clave de API (no se sube) 
-└── reporte_final.csv # Informe consolidado (se genera)
+evaluador-documentos-ai/ │ ├── curriculums/ # Archivos .docx a evaluar ├── prompts/ # Prompts generados por documento ├── resultados/ # Resultados individuales por archivo ├── prompt_base.txt # Plantilla con la rúbrica personalizada ├── analizar_cv.py # Script principal ├── equirements.txt # Dependencias ├── .env # Tu clave de API (no se sube) └── reporte_final.csv # Informe consolidado (se genera)
 
 ---
 
