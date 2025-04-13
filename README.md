@@ -51,3 +51,30 @@ echo DEEPSEEK_API_KEY=sk-proj-tu-clave-aquí > .env
 
 # 6. Ejecuta el script
 python analizar_cv.py
+
+✍️ Cómo funciona el prompt_base.txt
+Este archivo contiene el prompt que se le envía a la IA. Usa las variables:
+
+{{nombre_archivo}}: se reemplaza automáticamente por el nombre del archivo
+
+{{contenido}}: se reemplaza por el contenido extraído desde el .docx
+
+Puedes crear múltiples rúbricas (prompt_cv.txt, prompt_ensayo.txt, etc.) y usar el mismo sistema.
+
+📊 Cálculo de nota
+En el archivo reporte_final.csv, cada archivo se evalúa y se calcula la nota final con la fórmula:
+
+ini
+Copiar
+Editar
+nota = puntaje_total * 0.5 + 1
+Este cálculo es configurable en el script.
+
+💡 Ideas futuras
+Subida de documentos desde interfaz web (Flask o Streamlit)
+
+Evaluación en vivo con feedback inmediato
+
+Conexión con Google Sheets o Notion
+
+Soporte multi-rúbrica desde menú
