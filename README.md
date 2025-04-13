@@ -1,5 +1,5 @@
 
-# Evaluador de Currículum Vitae con OpenAI DeepSeek
+# Evaluador de Currículum Vitae con PLatform de DeepSeek
 
 ## ¿Qué hace este script?
 
