@@ -1,5 +1,5 @@
 
-# Evaluador de Currículum Vitae con OpenAI GPT-4
+# Evaluador de Currículum Vitae con OpenAI DeepSeek
 
 ## ¿Qué hace este script?
 
@@ -26,7 +26,7 @@ pip install -r requirements.txt
 
 3. Coloca tus archivos `.docx` en la carpeta `curriculums/`.
 
-4. Coloca tu API Key de OpenAI en el archivo `.env`.
+4. Coloca tu API Key de DeepSeek en el archivo `.env`.
 
 5. Ejecuta el script:
 
